@@ -1,5 +1,6 @@
-import * as core from './core';
+import './styles/app.sass';
+import { View } from './core';
 
-export default {
-    ...core,
-}
+export {
+    View
+};

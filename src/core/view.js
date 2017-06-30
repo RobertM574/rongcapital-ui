@@ -1,8 +1,6 @@
 import React, { PureComponent } from 'react';
 import { PropTypes } from 'prop-types';
 
-import * as styles from './style.sass';
-
 class View extends PureComponent {
 
     static propTypes = {
@@ -16,7 +14,7 @@ class View extends PureComponent {
 
     render() {
         return (
-            <div className={ styles.view }>Hello View</div>
+            <div className="view">Hello View</div>
         );
     }
 }
