@@ -1,10 +1,10 @@
 {
   "name": "rongcaptial-ui",
-  "version": "1.0.0",
+  "version": "1.0.0 alpha",
   "description": "for cube UI",
   "main": "index.js",
   "license": "MIT",
-  "repository": "",
+  "repository": "git@github.com:WellerQu/rongcapital-ui.git",
   "scripts": {
     "test": "cross-env NODE_ENV=development mocha --compilers js:babel-register -r ignore-styles -t 10000 -s 1000 --inline-diffs --growl --colors --harmony --recursive ./test/setup.js ./test/**/*.spec.js",
     "release:dev": "cross-env NODE_ENV=development webpack --config ./build/webpack.config.development.js",
@@ -17,7 +17,7 @@
     "Data-Platform"
   ],
   "author": "qiuwei@rongcapital.cn,baiyuntao@rongcapital.cn",
-  "dependencies": {
+  "devDependencies": {
     "@storybook/react": "^3.1.7",
     "autoprefixer": "^7.1.1",
     "babel-eslint": "^7.2.3",
@@ -74,5 +74,8 @@
     "webpack": "2.2.0",
     "webpack-merge": "^4.1.0",
     "webpack-shell-plugin": "^0.5.0"
+  },
+  "dependencies": {
+
   }
 }
