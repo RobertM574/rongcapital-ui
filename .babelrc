@@ -1,0 +1,32 @@
+{
+    "presets": ["es2015", "stage-2", "react"],
+    "plugins": [
+        "transform-decorators-legacy",
+        "transform-runtime"
+    ],
+    env: {
+        "production": {
+            "plugins": [
+                "transform-inline-consecutive-adds",
+                "transform-merge-sibling-variables",
+                "transform-property-literals",
+                "transform-remove-debugger",
+                "transform-remove-console",
+                "transform-node-env-inline",
+                "transform-member-expression-literals",
+                "transform-minify-booleans",
+                "transform-node-env-inline",
+                "minify-constant-folding",
+                "minify-dead-code-elimination",
+                "minify-guarded-expressions",
+                "minify-mangle-names",
+                "minify-simplify",
+                "minify-type-constructors"
+            ]
+        },
+        "development": {
+            "plugins": [
+            ]
+        }
+    }
+}
