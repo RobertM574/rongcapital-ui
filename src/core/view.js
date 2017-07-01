@@ -6,6 +6,11 @@ class View extends PureComponent {
     static propTypes = {
         width: PropTypes.number,
         height: PropTypes.number,
+        content: PropTypes.string,
+    };
+
+    static defaultProps = {
+        content: "Hello View",
     };
 
     constructor(props, context) {
@@ -14,7 +19,7 @@ class View extends PureComponent {
 
     render() {
         return (
-            <div className="view">Hello View</div>
+            <div className="view">{ this.props.content }</div>
         );
     }
 }

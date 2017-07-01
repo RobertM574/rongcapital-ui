@@ -6,4 +6,7 @@ import { View } from '../src/core';
 storiesOf('core.View', module)
     .add('normal', () => (
         <View />
+    ))
+    .add('change text', () => (
+        <View content="Hello Go" />
     ));
