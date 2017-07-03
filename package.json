@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": "git@github.com:WellerQu/rongcapital-ui.git",
   "scripts": {
-    "test": "cross-env NODE_ENV=development mocha --compilers js:babel-register -r ignore-styles -t 10000 -s 1000 --inline-diffs --growl --colors --harmony --recursive ./test/setup.js ./test/**/*.spec.js",
+    "test": "cross-env NODE_ENV=development mocha --compilers js:babel-register,js:./test/css-complier.js -t 10000 -s 1000 --inline-diffs --growl --colors --harmony --recursive ./test/setup.js ./test/**/*.spec.js",
     "release:dev": "cross-env NODE_ENV=development webpack --config ./build/webpack.config.development.js",
     "release": "cross-env NODE_ENV=production webpack --config ./build/webpack.config.production.js",
     "dev": "start-storybook -p 9001 -c build"
@@ -52,6 +52,7 @@
     "clean-webpack-plugin": "^0.1.16",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
+    "css-modules-require-hook": "^4.0.6",
     "enzyme": "^2.9.1",
     "eslint": "^4.1.1",
     "eslint-plugin-react": "^7.1.0",

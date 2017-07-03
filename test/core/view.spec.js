@@ -4,13 +4,14 @@ import { expect } from 'chai';
 import { mount, render, shallow } from 'enzyme';
 
 import { View } from '../../src';
+import * as componentStyles from '../../src/styles/view.sass';
 
 describe('core component view', () => {
 
     it('view initialize by default', () => {
         const wrapper = shallow(<View />);
         expect(wrapper.type()).to.equal('div');
-        expect(wrapper.hasClass('view')).to.equal(true);
+        expect(wrapper.hasClass(componentStyles.view)).to.equal(true);
     });
 
     it('view initialize with width = 200', () => {

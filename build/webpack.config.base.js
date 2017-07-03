@@ -82,7 +82,7 @@ module.exports = {
                     fallback: 'style-loader',
                     use: [
                         { 
-                            loader: `css-loader?modules&localIdentName=${ __DEV__ ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64]' }`,
+                            loader: `css-loader?modules&localIdentName=${ __DEV__ ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]' }`,
                         },
                         {
                             loader: 'postcss-loader',

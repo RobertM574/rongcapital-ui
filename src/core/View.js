@@ -3,6 +3,8 @@ import { PropTypes } from 'prop-types';
 import defaults from 'lodash/defaults';
 import memoize from 'lodash/memoize';
 
+import * as componentStyles from '../styles/view.sass';
+
 //  创建一个记忆函数用于合并尺寸样式
 const mergeStyle = memoize(defaults);
 const defaultStyles = {
@@ -25,7 +27,7 @@ class View extends PureComponent {
         let styles = mergeStyle({ width, height }, defaultStyles);
 
         return (
-            <div className="view" style={ styles }>{ children }</div>
+            <div className={ componentStyles.view } style={ styles }>{ children }</div>
         );
     }
 }

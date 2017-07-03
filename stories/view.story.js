@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { View } from '../src/core';
 
 storiesOf('core.View', module)
-    .add('normal', () => (
+    .add('initialize by default', () => (
         <View />
     ))
     .add('set width = 200', () => (
