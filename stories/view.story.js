@@ -7,6 +7,12 @@ storiesOf('core.View', module)
     .add('normal', () => (
         <View />
     ))
-    .add('change text', () => (
-        <View content="Hello Go" />
+    .add('set width = 200', () => (
+        <View width={ 200 } />
+    ))
+    .add('set height = 300', () => (
+        <View height={ 300 } />
+    ))
+    .add('set both of all', () => (
+        <View width={ 150 } height={ 150 } />
     ));
