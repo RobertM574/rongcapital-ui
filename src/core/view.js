@@ -11,6 +11,8 @@ class View extends PureComponent {
 
     static defaultProps = {
         content: "Hello View",
+        width: 100,
+        height: 100,
     };
 
     constructor(props, context) {
@@ -18,8 +20,10 @@ class View extends PureComponent {
     }
 
     render() {
+        const { width, height } = this.props;
+
         return (
-            <div className="view">{ this.props.content }</div>
+            <div className="view" style={{ minWidth: width, minHeight: height }}>{ this.props.content }</div>
         );
     }
 }
