@@ -9,23 +9,23 @@ const os = require('os');
 const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/webpack.config');
 const customConfig = require('./webpack.config.base');
 
-const isWindows = os.platform() === 'win32';
+const IS_WINDOWS = os.platform() === 'win32';
+const HOST = 'http://localhost:9001';
+const STARTUP_CMD = `${IS_WINDOWS ? 'start' : 'open'} ${HOST}`;
 
 module.exports = (baseConfig, env) => {
     const config = genDefaultConfig(baseConfig, env);
     // Extend it as you need.
 
     // For load sass
-    config.module.rules.push({
-        test: /\.sass$/,
-        loaders: ["style-loader", "css-loader", "sass-loader"],
-    });
+    config.module.rules.push(customConfig.module.rules[2]);
 
     // For automatic open default Broswer
     config.plugins.push(
+        customConfig.plugins[4],
         new WebpackShellPlugin({
             onBuildStart: [],
-            onBuildEnd: [`${isWindows?'start':'open'} http://localhost:9001`]
+            onBuildEnd: [ STARTUP_CMD ],
         })
     );
 
