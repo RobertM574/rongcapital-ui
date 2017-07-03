@@ -1,0 +1,6 @@
+image: nodejs:7.10
+
+unit_test:
+    script:
+        - npm i
+        - npm test
