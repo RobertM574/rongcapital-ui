@@ -32,9 +32,7 @@ class CollectionView extends View {
             },
         };
 
-        const { children, ...others } = this.props;
-        const { itemLayout } = others;
-
+        const { children, itemLayout } = this.props;
         const newChildren = React.Children.map(children, itemLayout);
 
         return React.cloneElement(elementTree, newProps, newChildren);
