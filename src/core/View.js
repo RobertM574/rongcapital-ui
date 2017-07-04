@@ -16,6 +16,7 @@ class View extends PureComponent {
     static propTypes = {
         width: PropTypes.number,
         height: PropTypes.number,
+        children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     };
 
     constructor(props, context) {

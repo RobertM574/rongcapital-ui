@@ -1,5 +1,9 @@
-import { View } from './core';
-
-export {
-    View
-};
+export { 
+    View, 
+    CollectionView,
+    DragDropView,
+    GridView,
+    ListView,
+    NavigationView,
+    ScrollableView,
+} from './core';

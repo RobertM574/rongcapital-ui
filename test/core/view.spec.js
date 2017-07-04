@@ -1,7 +1,8 @@
+/* global describe, it */
 import React from 'react';
-import sinon from 'sinon';
+//import sinon from 'sinon';
 import { expect } from 'chai';
-import { mount, render, shallow } from 'enzyme';
+import { /*mount, render,*/ shallow } from 'enzyme';
 
 import { View } from '../../src';
 import * as componentStyles from '../../src/styles/view.sass';
@@ -15,12 +16,12 @@ describe('core component view', () => {
     });
 
     it('view initialize with width = 200', () => {
-        const wrapper = shallow(<View width={ 200 } />)
+        const wrapper = shallow(<View width={ 200 } />);
         expect(wrapper.html()).to.include('width:200px');
     });
 
     it('view initialize with height = 300', () => {
-        const wrapper = shallow(<View height={ 300 } />)
+        const wrapper = shallow(<View height={ 300 } />);
         expect(wrapper.html()).to.include('height:300px');
     });
 

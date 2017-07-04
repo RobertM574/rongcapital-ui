@@ -95,6 +95,9 @@ module.exports = {
                         },
                         {
                             loader: "sass-loader",
+                            options: {
+                                data: "$env: " + process.env.NODE_ENV + ";",
+                            }
                         },
                     ],
                 }),
