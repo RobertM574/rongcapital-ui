@@ -74,6 +74,9 @@
 	- **Menu.Item**
 		菜单项视觉组件, 集成自View视图组件
 
+- **Loading**
+    视觉组件, 显示加载中, 继承自View视图组件
+
 - **LOGO**
 	LOGO视觉组件, 继承自View视图组件
 

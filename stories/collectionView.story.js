@@ -26,7 +26,6 @@ const itemLayout = (item, index) => (
         ...{
             style: {
                 position: 'absolute',
-                display: 'inline-block',
                 right: 50 * index,
                 width: 50,
                 height: 50,

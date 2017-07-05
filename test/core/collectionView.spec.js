@@ -7,7 +7,7 @@ import { CollectionView } from '../../src';
 import * as viewStyles from '../../src/styles/view.sass';
 import * as collectionViewStyles from '../../src/styles/collectionView.sass';
 
-describe.only('core component collectionView', () => {
+describe('core component collectionView', () => {
 
     it('collectionView initialize by default', () => {
         const wrapper = shallow(<CollectionView />);
