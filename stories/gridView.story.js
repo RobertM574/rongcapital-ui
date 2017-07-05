@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { View, GridView } from '../src/core';
+import { GridView } from '../src/core';
 
 storiesOf('core.GridView', module)
     .add('initialize by default', () => (
@@ -28,7 +28,7 @@ storiesOf('core.GridView', module)
             <div>item 6</div>
         </GridView>
     ))
-    .add('set row = 4 and columns = 4 and using 13 children', () => (
+    .add('set row = 4 and columns = 3 and using 13 children', () => (
         <GridView width={ 300 } height={ 300 } rows={ 4 } columns={ 3 } cellLayout={ cellLayout }>
             <div>item 0</div>
             <div>item 1</div>

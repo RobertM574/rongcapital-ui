@@ -29,33 +29,25 @@ class GridView extends CollectionView {
 
     constructor(props, context) {
         super(props, context);
-
-        const { rows, columns } = props;
-
-        // 初始化cells属性, 并封闭对cells的修改
-        Object.defineProperty(this, 'cells', {
-            value: Array.from({ length: rows * columns }, (_, index) => ({
-                // 一维数组索引二维化
-                x: index / columns >> 0,
-                y: index % columns,
-                // 合并单元格
-                rowspan: 1,
-                colspan: 1,
-                // 单元格上下文组件
-                // context: children[index] ? React.Children.toArray(omit(children[index], ['key'])) : void 0,
-                // 是否挂载
-                isMounted: true,
-            })),
-            configurable: false,
-            enumerable: true,
-            writable: false,
-        });
     }
 
     render() {
         const { rows, columns,  cellLayout } = this.props;
-        const cells = cellLayout(this.cells);
-        const children = React.Children.toArray(this.props.children);
+        const cells = cellLayout(Array.from({ length: rows * columns }, (_, index) => ({
+            // 一维数组索引二维化
+            x: index / columns >> 0,
+            y: index % columns,
+            // 合并单元格
+            rowspan: 1,
+            colspan: 1,
+            // 单元格上下文组件
+            // context: children[index] ? React.Children.toArray(omit(children[index], ['key'])) : void 0,
+            // 是否挂载
+            isMounted: true,
+        })));
+
+        const elementTree = super.render();
+        const children = React.Children.toArray(elementTree.props.children);
 
         let item = null, i = 0, j = 0;
 
@@ -71,8 +63,6 @@ class GridView extends CollectionView {
         }
 
         const newChildren = gridLayout(cells, rows, columns);
-
-        const elementTree = super.render();
         const newProps = {
             ...elementTree.props,
             ...{

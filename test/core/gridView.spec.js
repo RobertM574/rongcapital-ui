@@ -6,7 +6,7 @@ import { GridView } from '../../src';
 
 import * as componentStyles from '../../src/styles/gridView.sass';
 
-describe.only('core component gridView', () => {
+describe('core component gridView', () => {
     
     it('gridView initialize by default', () => {
         const wrapper = shallow(<GridView />);
