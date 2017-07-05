@@ -6,7 +6,7 @@ import { ListView } from '../../src';
 
 import * as componentStyles from '../../src/styles/listView.sass';
 
-describe.only('core component listView', () => {
+describe('core component listView', () => {
 
     it('listView initialize by default', () => {
         const wrapper = shallow(<ListView />);

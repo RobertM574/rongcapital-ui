@@ -7,7 +7,7 @@
   "repository": "git@github.com:WellerQu/rongcapital-ui.git",
   "scripts": {
     "lint": "eslint ./src ./test --fix --cache",
-    "test": "cross-env NODE_ENV=development mocha --compilers js:babel-register,js:./test/css-complier.js -t 10000 -s 1000 --inline-diffs --growl --colors --harmony --recursive ./test/setup.js ./test/**/*.spec.js",
+    "test": "cross-env NODE_ENV=production mocha --compilers js:babel-register,js:./test/css-complier.js -t 10000 -s 1000 --inline-diffs --growl --colors --harmony --recursive ./test/setup.js ./test/**/*.spec.js",
     "release:dev": "cross-env NODE_ENV=development webpack --config ./build/webpack.config.development.js",
     "release": "cross-env NODE_ENV=production webpack --config ./build/webpack.config.production.js",
     "dev": "start-storybook -p 9001 -c build"
