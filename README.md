@@ -15,9 +15,12 @@
 
 ## 工具
 
-[Enzyme](http://airbnb.io/enzyme/docs/api/index.html)
-<br />
-[stroybook](https://storybook.js.org/)
+- [Enzyme](http://airbnb.io/enzyme/docs/api/index.html)
+- [stroybook](https://storybook.js.org/)
+
+## 其他依赖
+
+- [core-decorator](https://github.com/jayphelps/core-decorators.js)
 
 ## Core components
 

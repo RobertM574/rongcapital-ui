@@ -1,5 +1,4 @@
 import React from 'react';
-import createFragment from 'react-addons-create-fragment';
 import PropTypes from 'prop-types';
 import clazz from 'classnames';
 
@@ -49,13 +48,13 @@ class GridView extends CollectionView {
         const elementTree = super.render();
         const children = React.Children.toArray(elementTree.props.children);
 
-        let item = null, i = 0, j = 0;
+        let item = null, i = 0;
 
         for (let cell of cells) {
             if (!cell.isMounted)
                 continue;
 
-            item = children[j++];
+            item = children[i++];
             if (!item)
                 continue;
 

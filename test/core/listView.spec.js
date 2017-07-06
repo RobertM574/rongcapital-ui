@@ -8,13 +8,13 @@ import * as componentStyles from '../../src/styles/listView.sass';
 
 describe('core component listView', () => {
 
-    it('listView initialize by default', () => {
+    it('initialize by default', () => {
         const wrapper = shallow(<ListView />);
         expect(wrapper.hasClass(componentStyles.listView)).to.equal(true);
         expect(wrapper.find('ul')).to.have.lengthOf(1);
     });
 
-    it('listView initialize by 6 items', () => {
+    it('initialize by 6 items', () => {
         const wrapper = shallow(
             <ListView>
                 <div>item 0</div>
@@ -29,7 +29,7 @@ describe('core component listView', () => {
         expect(wrapper.find('ul div')).to.have.lengthOf(6);
     });
 
-    it('listView initialize by itemLayout', () => {
+    it('initialize by itemLayout', () => {
         const itemLayout = (item, index) => {
             if (index % 2 == 0) {
                 return React.cloneElement(item, {
@@ -61,7 +61,7 @@ describe('core component listView', () => {
         wrapper.find('ul div').forEach((item, index) => {
             if (index % 2 == 0) {
                 expect(item.html()).to.include('color:white');
-                expect(item.html()).to.include('background-color:red')
+                expect(item.html()).to.include('background-color:red');
             }
         });
     });

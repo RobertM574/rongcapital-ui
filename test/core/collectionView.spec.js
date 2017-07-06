@@ -9,13 +9,13 @@ import * as collectionViewStyles from '../../src/styles/collectionView.sass';
 
 describe('core component collectionView', () => {
 
-    it('collectionView initialize by default', () => {
+    it('initialize by default', () => {
         const wrapper = shallow(<CollectionView />);
         expect(wrapper.type()).to.equal('div');
         expect(wrapper.hasClass(viewStyles.view) && wrapper.hasClass(collectionViewStyles.collectionView)).to.equal(true);
     });
 
-    it('collectionView initialize by one child', () => {
+    it('initialize by one child', () => {
         const wrapper = shallow(
             <CollectionView>
                 <div>Hello World</div>
@@ -26,7 +26,7 @@ describe('core component collectionView', () => {
         expect(wrapper.text()).to.equal('Hello World');
     });
 
-    it('collectionView initialize by more children and itemLayout', () => {
+    it('initialize by more children and itemLayout', () => {
         const itemLayout = (item, index) => ( 
             React.cloneElement(item, {
                 ...item.props,
