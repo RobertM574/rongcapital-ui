@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import clazz from 'classnames';
-import { autobind } from 'core-decorators';
+//import { autobind } from 'core-decorators';
 
 import View from './View';
 
@@ -61,9 +61,12 @@ const NavigationViewController = (View) =>
                 // 子视图索引状态
                 index,
             };
+
+            this.next = this.next.bind(this);
+            this.prev = this.prev.bind(this);
         }
 
-        @autobind
+        //@autobind
         next() {
             const index = this.state.index + 1;
             const { children } = this.props;
@@ -77,7 +80,7 @@ const NavigationViewController = (View) =>
             afterNext && afterNext();
         }
 
-        @autobind
+        //@autobind
         prev() {
             const index = this.state.index - 1;
 
