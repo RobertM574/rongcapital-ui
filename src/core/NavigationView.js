@@ -34,8 +34,8 @@ class NavigationView extends View {
     }
 }
 
-const NavigationViewController = (View) =>
-    class Controller extends Component {
+const Controller = (View) =>
+    class NavigationViewController extends Component {
 
         static propTypes = {
             index: PropTypes.number,
@@ -110,4 +110,4 @@ const NavigationViewController = (View) =>
         }
     };
 
-export default NavigationViewController(NavigationView);
+export default Controller(NavigationView);
