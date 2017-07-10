@@ -7,6 +7,11 @@ import View from './View';
 import * as componentStyles from '../styles/scrollableView.sass';
 
 class ScrollableView extends View {
+
+    static propTypes = {
+        children: PropTypes.element,
+    };
+
     constructor(props, context) {
         super(props, context);
     }
@@ -33,6 +38,6 @@ const Controller = (View) =>
         render() {
             return <View {...this.props} />;
         }
-    }
+    };
 
 export default Controller(ScrollableView);
